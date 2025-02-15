@@ -1,16 +1,15 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include "linked_list.h"
+
+
+
 
 /*
     Meant to serve as a linked list ONLY for chaining hash tables
     :)
  */
-
-struct Node {
-    std::string key;
-    Node* next;
-};
 
 class LinkedList {
     private:

@@ -12,3 +12,12 @@ struct Node {
     Node* next;
 };
 
+class LinkedList {
+    private:
+        Node* head; 
+        Node* tail;
+    public:
+        LinkedList();
+        void append(std::string str);
+        void print();
+};
