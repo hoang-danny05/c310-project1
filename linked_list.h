@@ -16,8 +16,10 @@ class LinkedList {
     private:
         Node* head; 
         Node* tail;
+        int length;
     public:
         LinkedList();
         void append(std::string str);
         void print();
+        int get_length();
 };

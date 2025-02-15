@@ -14,6 +14,7 @@
 LinkedList::LinkedList() {
     head = NULL; // ONLY when list is empty!
     tail = NULL;
+    length = 0;
 }
 
 void LinkedList::append(std::string str) {
@@ -27,6 +28,7 @@ void LinkedList::append(std::string str) {
     newnode->key = str;
     newnode->next = NULL;
     tail = newnode;
+    length++;
 }
 
 void LinkedList::print() {
@@ -42,5 +44,9 @@ void LinkedList::print() {
             break;
         nodeptr = nodeptr->next;
     }
+}
+
+int LinkedList::get_length() {
+    return length;
 }
 

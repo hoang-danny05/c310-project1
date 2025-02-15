@@ -45,7 +45,10 @@ int main() {
     cout << "==== Printing the contents of the first 5 slots ====" << endl;
 
     list->print();
+
     cout << "==== Printing the slot lengths ====" << endl;
+
+    std::cout << list->get_length() << std::endl;
 
     cout << "==== Printing the standard variance =====" << endl;
 
