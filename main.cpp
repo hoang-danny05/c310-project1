@@ -39,9 +39,12 @@ int main() {
 
     // Your time to shine starts now
     LinkedList* list = new LinkedList();
+    list->append("donny");
+    list->append("joden");
 
     cout << "==== Printing the contents of the first 5 slots ====" << endl;
 
+    list->print();
     cout << "==== Printing the slot lengths ====" << endl;
 
     cout << "==== Printing the standard variance =====" << endl;
