@@ -38,11 +38,10 @@ int main() {
     // which puts out the placeholders only.
 
     // Your time to shine starts now
-    HashTable* table = new HashTable(2);
-    table->insert("donny");
-    table->insert("joden");
-    table->insert("big");
-    //table->insert("chubby");
+    HashTable* table = new HashTable(k);
+    for (int i = 0; i < n; i++) {
+        table->insert(texts[i]);
+    }
 
     cout << "==== Printing the contents of the first 5 slots ====" << endl;
 

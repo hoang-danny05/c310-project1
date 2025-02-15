@@ -4,8 +4,6 @@
 #include "linked_list.h"
 
 
-
-
 /*
     Meant to serve as a linked list ONLY for chaining hash tables
     :)
