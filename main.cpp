@@ -38,17 +38,19 @@ int main() {
     // which puts out the placeholders only.
 
     // Your time to shine starts now
-    LinkedList* list = new LinkedList();
-    list->append("donny");
-    list->append("joden");
+    HashTable* table = new HashTable(2);
+    table->insert("donny");
+    table->insert("joden");
+    table->insert("big");
+    //table->insert("chubby");
 
     cout << "==== Printing the contents of the first 5 slots ====" << endl;
 
-    list->print();
+    table->displaySlots();
 
     cout << "==== Printing the slot lengths ====" << endl;
 
-    std::cout << list->get_length() << std::endl;
+    table->displaySlotLengths();
 
     cout << "==== Printing the standard variance =====" << endl;
 

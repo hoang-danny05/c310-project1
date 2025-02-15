@@ -32,18 +32,19 @@ void LinkedList::append(std::string str) {
 }
 
 void LinkedList::print() {
-    std::cout << "Test print\n";
     if (head == NULL) {
-        std::cout << "Head is NULL!!\n";
+        std::cout << "==NONE==\n";
         return;
     }
     Node* nodeptr = head;
     while(1) {
-        std::cout << nodeptr->key << ",";
+        std::cout << nodeptr->key;
         if (nodeptr->next == NULL) 
             break;
+        std::cout << ", ";
         nodeptr = nodeptr->next;
     }
+    std::cout << std::endl;
 }
 
 int LinkedList::get_length() {
