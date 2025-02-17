@@ -31,7 +31,7 @@ void LinkedList::append(std::string str) {
 
 void LinkedList::print() {
     if (head == NULL) {
-        std::cout << "==NONE==\n";
+        std::cout << "\n";
         return;
     }
     Node* nodeptr = head;

@@ -53,5 +53,7 @@ int main() {
 
     cout << "==== Printing the standard variance =====" << endl;
 
+    table->displaySlotStdDev();
+
     return 0;
 }

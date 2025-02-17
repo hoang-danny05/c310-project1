@@ -36,3 +36,24 @@ void HashTable::displaySlotLengths() {
         std::cout << "Length: " << slots[i].get_length() << std::endl;
     }
 }
+
+void HashTable::displaySlotStdDev() {
+    if (slot_amount == 0) {
+        std::cout << "0.0\n";
+        return;
+    }
+
+    double sum = 0.0;
+    for (int i = 0; i < slot_amount; i++) {
+        sum += slots[i].get_length();
+    }
+    double mean = sum / slot_amount;
+
+    double sum_squared_error = 0.0;
+    for (int i = 0; i < slot_amount; i++) {
+        sum_squared_error += std::pow(slots[i].get_length() - mean, 2);
+    }
+
+    double std_dev = std::sqrt(sum_squared_error / slot_amount);
+    std::cout << std_dev << std::endl;
+}

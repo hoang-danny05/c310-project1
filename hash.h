@@ -20,4 +20,5 @@ class HashTable {
         //output stuff
         void displaySlots();
         void displaySlotLengths();
+        void displaySlotStdDev();
 };
