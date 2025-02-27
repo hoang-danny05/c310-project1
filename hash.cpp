@@ -2,16 +2,22 @@
 #include <string>
 #include "hash.h"
 
-#define MAGIC 0x63
-
 using namespace std;
 
+//google polynomial rolling function
+// std dev from 2-3 is normal
+// best ever was 0.9
 int hash_function(string text) {
-    int hash_val = 0;
-    for (int i = 0; i < text.size(); i++) {
-        hash_val += text[i] * MAGIC;
-    }
-    return hash_val;
+  const int large_limit = 1e9+9;
+  const int magic_prime = 53; // roughly equal to the number of letters
+  int hash_value = 0;
+  // starts at p^0 and becomes p^i
+  int prime_power = 1;
+  for (int i = 0; i < text.size(); i++) {
+    hash_value = 
+      (hash_value + (text[i] - 'A' + 1) * prime_power) % large_limit;
+  }
+  return hash_value;
 }
 
 HashTable::HashTable(int slot_amt) {
